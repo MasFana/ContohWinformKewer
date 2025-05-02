@@ -7,13 +7,14 @@ namespace ContohWinform2
 		public Form1()
 		{
 			InitializeComponent();
+			textBox1.PasswordChar = '*';
+
 		}
 
 
 		private void textBox1_TextChanged(object sender, EventArgs e)
 		{
 			Username = textBox1.Text;
-
 			LabelAtas.Text = Username;
 			if (textBox1.Text.Length <= 0)
 			{
@@ -35,6 +36,18 @@ namespace ContohWinform2
 				{
 					MessageBox.Show("Kamu Bukan Fana");
 				}
+			}
+		}
+
+		private void checkBox1_CheckedChanged(object sender, EventArgs e)
+		{
+			if (!checkBox1.Checked)
+			{
+				textBox1.PasswordChar = '*';
+			}
+			else
+			{
+				textBox1.PasswordChar = '\0';
 			}
 		}
 	}

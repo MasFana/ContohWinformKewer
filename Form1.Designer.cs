@@ -32,6 +32,7 @@
 			textBox1 = new TextBox();
 			LabelAtas = new Label();
 			button1 = new Button();
+			checkBox1 = new CheckBox();
 			SuspendLayout();
 			// 
 			// textBox1
@@ -63,11 +64,23 @@
 			button1.UseVisualStyleBackColor = true;
 			button1.Click += button1_Click;
 			// 
+			// checkBox1
+			// 
+			checkBox1.AutoSize = true;
+			checkBox1.Location = new Point(547, 191);
+			checkBox1.Name = "checkBox1";
+			checkBox1.Size = new Size(131, 29);
+			checkBox1.TabIndex = 5;
+			checkBox1.Text = "Nak Tengok";
+			checkBox1.UseVisualStyleBackColor = true;
+			checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(10F, 25F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(800, 450);
+			Controls.Add(checkBox1);
 			Controls.Add(button1);
 			Controls.Add(LabelAtas);
 			Controls.Add(textBox1);
@@ -84,5 +97,6 @@
 		private Label InputUsername;
 		private Button button1;
 		public Label LabelAtas;
+		private CheckBox checkBox1;
 	}
 }
